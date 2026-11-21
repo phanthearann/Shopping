@@ -316,6 +316,10 @@ footer p {
         justify-content: center;
         gap: 16px;
     }
+    .all-product{
+        margin-left: 0;
+        padding: 10px;
+    }
 
     .menu-toggle {
         display: block;
