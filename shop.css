@@ -83,6 +83,7 @@
     padding: 13px 8px;
     font-size: 20px;
 }
+
 /* ============ TABLET BREAKPOINT (<= 992px) =========== */
 @media (max-width: 992px) {
     .cart-container {
@@ -147,27 +148,52 @@
         font-size: 14px;
     }
 }
+
 @media (max-width: 420px) {
-    .cart-table thead {
-        display: none;
+    .cart-container {
+        width: 95%;
+        margin: 40px auto;
     }
 
-    .cart-table tr {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 0;
-        border-bottom: 1px solid #eee;
+    .cart-table th {
+        font-size: 14px;
     }
 
     .cart-table td {
-        padding: 4px;
-        text-align: left;
+        padding: 10px 4px;
+        font-size: 13px;
     }
 
     .product-info {
-        width: 100%;
+        gap: 7px;
+    }
+
+    .product-info img {
+        width: 60px;
+        height: 70px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+    .product-info span {
+        font-size: 10px;
+    }
+
+    .product-info a {
+        font-size: 10px;
+    }
+
+    .cart-table input {
+        width: 40px;
+        height: 32px;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .total-table td {
+        font-size: 13px;
+        padding: 9px 4px;
     }
 }
