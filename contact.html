@@ -56,6 +56,31 @@
             </form>
         </div>
     </section>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const menuIcon = document.getElementById("menu-icon");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menu.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            // Swap between hamburger and close (X) icon
+            menuIcon.classList.toggle("fa-bars", !isOpen);
+            menuIcon.classList.toggle("fa-xmark", isOpen);
+        });
+
+        // Optional: close menu when a link is clicked
+        menu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuIcon.classList.add("fa-bars");
+                menuIcon.classList.remove("fa-xmark");
+            });
+        });
+    </script>
 </body>
 
 </html>
