@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awnsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- ========== HEADER SECTION ========== -->
+
+    <section class="header">
+        <header>
+            <div class="logo">
+                <h1>MasterIT Store</h1>
+            </div>
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation"
+                aria-expanded="false">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            </button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <div class="about">
+
+        <div class="about-title">
+            <h1>About MasterIT Store</h1>
+        </div>
+
+        <div class="info">
+
+            <p class="introduction">
+                Everything you wanted to know about your fave
+                fashion brand. And then some.
+            </p>
+
+            <p class="context">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Delectus doloremque quaerat quae sit inventore temporibus
+                cum similique iusto, mollitia sapiente ut dicta libero
+                maiores sed quas eos id in pariatur voluptatibus veritatis
+                molestiae aut odio! Qui ea dolorum corrupti illo quo
+                similique animi aut dolores ipsa, explicabo consectetur.
+
+                Sed laboriosam alias, voluptates commodi quibusdam, ab,
+                accusantium harum numquam quam deleniti maiores nam eum!
+                Consequatur ducimus accusamus quod incidunt soluta corrupti
+                nobis dignissimos ratione ullam ad impedit perferendis
+                iusto, iste officiis.
+
+                Obcaecati magnam consequatur aliquid nostrum, excepturi
+                consequuntur ducimus ad? Obcaecati delectus ex voluptates
+                nostrum quasi minus doloremque esse omnis quisquam
+                cupiditate animi consectetur quam rem praesentium iure
+                pariatur fugit ratione, a, facilis quibusdam maiores odit
+                molestiae.
+
+                Corrupti, quasi assumenda nulla necessitatibus enim ipsam
+                nemo repellat modi beatae maxime dolores saepe delectus
+                eius exercitationem. Dolores cum beatae, excepturi
+                nostrum soluta ea sit aut minus assumenda eligendi!
+            </p>
+
+        </div>
+
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const menuIcon = document.getElementById("menu-icon");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menu.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            // Swap between hamburger and close (X) icon
+            menuIcon.classList.toggle("fa-bars", !isOpen);
+            menuIcon.classList.toggle("fa-xmark", isOpen);
+        });
+
+        // Optional: close menu when a link is clicked
+        menu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuIcon.classList.add("fa-bars");
+                menuIcon.classList.remove("fa-xmark");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
